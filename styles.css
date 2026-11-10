@@ -132,6 +132,7 @@ a {
 }
 
 .nav-list a {
+  white-space: nowrap;
   color: var(--muted);
   transition: color .15s;
 }
@@ -260,6 +261,7 @@ a {
 .accent-mint { --accent: var(--mint); }
 .accent-periwinkle { --accent: var(--periwinkle); }
 .accent-peach { --accent: var(--peach); }
+.accent-blush { --accent: var(--blush); }
 
 .project-art {
   aspect-ratio: 12 / 5;
@@ -345,6 +347,14 @@ a {
 }
 .project-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+.project-note {
+  margin-top: auto;
+  padding-top: 32px;
+  font-family: var(--font-mono);
+  font-size: .875rem;
+  color: var(--muted);
+}
+
 /* About */
 .about-grid {
   display: grid;
@@ -380,6 +390,45 @@ a {
   color: var(--accent);
 }
 .skill dd { color: var(--muted); }
+
+/* Spare time */
+.section-lede {
+  margin-bottom: 40px;
+  color: var(--muted);
+  font-size: clamp(1.0625rem, 1.6vw, 1.1875rem);
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.hobby {
+  padding-top: 24px;
+  border-top: 2px solid var(--accent);
+}
+
+.hobby-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  color: var(--muted);
+  transition: color .15s;
+}
+.hobby:hover .hobby-icon { color: var(--accent); }
+
+.hobby-title {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.hobby-desc {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: .9375rem;
+}
 
 /* Contact */
 .contact-lede {
@@ -439,6 +488,10 @@ a {
 .footer-links a:hover { color: var(--text); }
 
 /* Responsive */
+@media (max-width: 960px) {
+  .hobby-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 860px) {
   .project-grid,
   .about-grid {
@@ -446,14 +499,15 @@ a {
   }
 }
 
-@media (max-width: 560px) {
-  .brand-name { display: none; }
-  .nav-list { font-size: .75rem; letter-spacing: .04em; }
-  .skill { grid-template-columns: 1fr; gap: 6px; }
+@media (max-width: 640px) {
+  .nav-github { display: none; }
 }
 
-@media (max-width: 380px) {
-  .nav-list li:last-child { display: none; }
+@media (max-width: 560px) {
+  .hobby-grid { grid-template-columns: 1fr; }
+  .brand-name { display: none; }
+  .nav-list { gap: 12px; font-size: .6875rem; letter-spacing: .02em; }
+  .skill { grid-template-columns: 1fr; gap: 6px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
