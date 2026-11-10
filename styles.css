@@ -269,15 +269,19 @@ a {
 }
 
 /* Scroll reveal */
-.js [data-reveal] { opacity: 0; }
+.js [data-reveal] {
+  opacity: 0;
+  translate: 0 28px;
+  transition:
+    opacity .7s cubic-bezier(.2, .8, .2, 1),
+    translate .7s cubic-bezier(.2, .8, .2, 1),
+    border-color .2s,
+    transform .2s;
+}
 .js [data-reveal].is-visible {
   opacity: 1;
-  animation: reveal .7s cubic-bezier(.2, .8, .2, 1) var(--reveal-delay, 0ms) backwards;
-}
-
-@keyframes reveal {
-  from { opacity: 0; transform: translateY(28px); }
-  to { opacity: 1; transform: none; }
+  translate: none;
+  transition-delay: var(--reveal-delay, 0ms), var(--reveal-delay, 0ms), 0s, 0s;
 }
 
 .hero-actions {
@@ -633,7 +637,7 @@ a {
     transition: none !important;
     animation: none !important;
   }
-  .js [data-reveal] { opacity: 1; }
+  .js [data-reveal] { opacity: 1; translate: none; }
   .button:hover,
   .project:hover,
   .notice:hover,

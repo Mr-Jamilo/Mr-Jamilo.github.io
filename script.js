@@ -10,11 +10,13 @@
   const observer = new IntersectionObserver((entries) => {
     let index = 0;
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.style.setProperty("--reveal-delay", `${index * 90}ms`);
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-      index += 1;
+      if (entry.isIntersecting) {
+        entry.target.style.setProperty("--reveal-delay", `${index * 90}ms`);
+        entry.target.classList.add("is-visible");
+        index += 1;
+      } else {
+        entry.target.classList.remove("is-visible");
+      }
     });
   }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
 
