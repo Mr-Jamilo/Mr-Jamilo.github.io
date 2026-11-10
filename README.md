@@ -2,4 +2,4 @@
 
 Personal portfolio
 
-A single static page (`index.html` + `styles.css`) with no JavaScript.
+A single static page (`index.html` + `styles.css`), with a small `script.js` for scroll-reveal animations.
