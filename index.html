@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jamie Lo — Portfolio</title>
+  <meta name="description" content="Portfolio of Jamie Lo: retinal disease classification with CNNs and graph neural networks, and Bloodstream, an iOS SpriteKit game.">
+  <meta name="theme-color" content="#0e1013">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Jamie Lo, back to top">
+        <span class="brand-mark" aria-hidden="true">JL</span>
+        <span class="brand-name">Jamie Lo</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://github.com/Mr-Jamilo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow">Portfolio — 2026</p>
+        <h1 class="hero-title" id="hero-title">Jamie Lo</h1>
+        <p class="hero-lede">I build machine learning models that read medical images&nbsp;— and small iOS games.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View projects</a>
+          <a class="button" href="https://github.com/Mr-Jamilo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-index">01</p>
+          <h2 class="section-title" id="projects-title">Selected work</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project accent-periwinkle" aria-labelledby="p1-title">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 480 200" preserveAspectRatio="xMidYMid meet">
+                <g fill="none" stroke-width="2">
+                  <rect x="24" y="64" width="72" height="72" stroke="#b6bceb"/>
+                  <rect x="36" y="76" width="72" height="72" stroke="#b6bceb" opacity=".55"/>
+                  <rect x="48" y="88" width="72" height="72" stroke="#b6bceb" opacity=".3"/>
+                  <rect x="150" y="80" width="44" height="44" stroke="#a7dcc8"/>
+                  <rect x="158" y="88" width="44" height="44" stroke="#a7dcc8" opacity=".5"/>
+                  <rect x="226" y="92" width="24" height="24" stroke="#a7dcc8"/>
+                  <rect x="232" y="98" width="24" height="24" stroke="#a7dcc8" opacity=".5"/>
+                  <path d="M128 112h16M210 108h12M262 108h24" stroke="#5b6170"/>
+                  <path d="M330 60l50 30M330 60l-14 68M380 90l-64 38M380 90l40 56M316 128l56 34M420 146l-48 16M380 90l60-24M440 66l-20 80" stroke="#f1c6a6" opacity=".7"/>
+                </g>
+                <g>
+                  <rect x="324" y="54" width="12" height="12" fill="#f1c6a6"/>
+                  <rect x="374" y="84" width="12" height="12" fill="#b6bceb"/>
+                  <rect x="310" y="122" width="12" height="12" fill="#a7dcc8"/>
+                  <rect x="414" y="140" width="12" height="12" fill="#e7b4c2"/>
+                  <rect x="366" y="156" width="12" height="12" fill="#f1c6a6"/>
+                  <rect x="434" y="60" width="12" height="12" fill="#a7dcc8"/>
+                </g>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>01</span><span>Machine learning</span><span>Python</span></p>
+              <h3 class="project-title" id="p1-title">Retinal disease classification</h3>
+              <p class="project-desc">Classifies retinal fundus images with three model families&nbsp;— a ResNet-style CNN, a vision GNN that builds dynamic k-NN graphs over image patches, and a hybrid that feeds CNN features into graph layers. Predictions are served through a FastAPI inference API and a plain HTML/CSS/JS frontend.</p>
+              <ul class="project-points">
+                <li>Binary disease-risk and multilabel detection of DR, MH, TSLN and ODC</li>
+                <li>Trained and evaluated on the RFMiD dataset with selectable GCN, GAT and GIN graph layers</li>
+                <li>Web demo with test-set gallery, image upload and adjustable thresholds</li>
+              </ul>
+              <ul class="chips" aria-label="Technologies">
+                <li>Python</li><li>PyTorch</li><li>PyTorch Geometric</li><li>FastAPI</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Mr-Jamilo/cnn-gnn" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span><span class="sr-only"> for Retinal disease classification (opens in new tab)</span></a>
+            </div>
+          </article>
+
+          <article class="project accent-peach" aria-labelledby="p2-title">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 480 200" preserveAspectRatio="xMidYMid meet">
+                <rect x="0" y="0" width="480" height="28" fill="#e7b4c2" opacity=".18"/>
+                <rect x="0" y="172" width="480" height="28" fill="#e7b4c2" opacity=".18"/>
+                <path d="M0 28h480M0 172h480" stroke="#e7b4c2" stroke-width="2"/>
+                <g stroke="#5b6170" stroke-width="2" stroke-dasharray="6 10">
+                  <path d="M150 100h-56"/>
+                </g>
+                <circle cx="96" cy="100" r="18" fill="none" stroke="#e7b4c2" stroke-width="3"/>
+                <circle cx="96" cy="100" r="7" fill="#e7b4c2"/>
+                <rect x="210" y="44" width="40" height="40" fill="#f1c6a6"/>
+                <rect x="300" y="118" width="54" height="54" fill="#f1c6a6" opacity=".85"/>
+                <rect x="404" y="60" width="18" height="18" fill="none" stroke="#f1c6a6" stroke-width="2"/>
+                <rect x="410" y="66" width="6" height="6" fill="#f1c6a6"/>
+                <rect x="250" y="122" width="26" height="12" fill="#a7dcc8"/>
+                <path d="M263 122v12" stroke="#0e1013" stroke-width="2"/>
+                <g stroke="#5b6170" stroke-width="2">
+                  <path d="M262 64h20M366 145h16M432 69h14M288 128h12"/>
+                </g>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>02</span><span>iOS game</span><span>Swift</span></p>
+              <h3 class="project-title" id="p2-title">Bloodstream</h3>
+              <p class="project-desc">An educational SpriteKit arcade game about atherosclerosis. You steer a red blood cell through an artery, dodging plaque that grows larger and faster over time, while info screens explain how plaque forms and how statins help.</p>
+              <ul class="project-points">
+                <li>Touch and swipe controls with SpriteKit physics and collision categories</li>
+                <li>Statin power-ups reset the dynamic difficulty ramp</li>
+                <li>Persistent JSON leaderboard with optional end-of-game selfies</li>
+              </ul>
+              <ul class="chips" aria-label="Technologies">
+                <li>Swift</li><li>SpriteKit</li><li>UIKit</li>
+              </ul>
+              <a class="project-link" href="https://github.com/Mr-Jamilo/swift-app" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span><span class="sr-only"> for Bloodstream (opens in new tab)</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-index">02</p>
+          <h2 class="section-title" id="about-title">About</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I'm Jamie, a developer interested in applying machine learning to medical imaging and in building approachable software around it.</p>
+            <p>My projects range from comparing convolutional and graph-based neural networks for retinal disease detection to a small iOS game that teaches how atherosclerosis works.</p>
+          </div>
+          <dl class="skills">
+            <div class="skill accent-mint">
+              <dt>Machine learning</dt>
+              <dd>PyTorch, PyTorch Geometric, CNNs, graph neural networks</dd>
+            </div>
+            <div class="skill accent-periwinkle">
+              <dt>iOS</dt>
+              <dd>Swift, SpriteKit, UIKit, storyboards</dd>
+            </div>
+            <div class="skill accent-peach">
+              <dt>Web &amp; tooling</dt>
+              <dd>FastAPI, HTML, CSS, JavaScript, shell</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-index">03</p>
+          <h2 class="section-title" id="contact-title">Contact</h2>
+        </div>
+        <p class="contact-lede">Open to conversations about projects, roles and collaborations.</p>
+        <a class="contact-email" href="mailto:jllo51104@gmail.com">jllo51104@gmail.com</a>
+        <ul class="contact-links">
+          <li><a href="https://github.com/Mr-Jamilo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/jjjamielo/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Jamie Lo · Built with plain HTML &amp; CSS</p>
+      <ul class="footer-links">
+        <li><a href="mailto:jllo51104@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Mr-Jamilo" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+        <li><a href="https://www.linkedin.com/in/jjjamielo/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
