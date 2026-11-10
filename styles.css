@@ -581,6 +581,14 @@ a {
   gap: 16px;
 }
 
+.footer-meta {
+  display: grid;
+  gap: 4px;
+}
+
+.footer-updated { font-size: .75rem; opacity: .75; }
+.footer-updated[hidden] { display: none; }
+
 .footer-links {
   display: flex;
   gap: 24px;
